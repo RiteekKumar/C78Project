@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Family Photos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center style="margin-top:40px;">
+        <h1> FAMILY PHOTOS </h1>
+           <img src="download.jpg" style="width: 40%;" id="Family_Member">
+         <h2 id="Family_Member_Name"></h2>
+        <button onclick="update();">Next</button></center>
+    </body>
+    <script>
+        var images=["daddy pig.png","mummy pig.png","peppa pig.jpg","geor.jpg"];
+        var names=["Daddy Pig","Mummy Pig","Peppa Pig","George Pig"];
+        var i=0;
+        function update()
+        {
+            i++;
+            var number=5;
+            if(i>number)
+            {
+                i=0;
+            }
+            var updateimage=images[i];
+            var updatename=names[i];
+            document.getElementById("Family_Member").src=updateimage;
+            document.getElementById("Family_Member_Name").innerHTML=updatename;
+        }
+       </script>
+</html>
